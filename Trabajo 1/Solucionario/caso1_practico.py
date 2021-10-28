@@ -6,7 +6,7 @@ print("Cálculo del tiempo de generación bacteriana")
 empezar = input("¿Desea empezar?, ingrese SI o NO, en mayusculas y sin espacios: ")
 
 if(empezar != "SI" and empezar != "NO"):
-    print("El dato ingresado no es válido")
+    print("El comando ingresado no es válido")
 else:
     while(empezar == "SI"):
         nombre = input("Ingresa el nombre de la bacteria a analizar: ")
