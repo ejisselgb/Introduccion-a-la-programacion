@@ -1,4 +1,4 @@
-# BIENVENIDOS AL CURSO: **Introduccion-a-la-programacion**
+# BIENVENIDOS AL CURSO: **Introduccion a la programacion**
 
 Este curso está diseñado para estudiantes del programa de Biología de la universidad EAFIT. 
 Aquí encontrarás las clases diseñadas según tu semestre. 
