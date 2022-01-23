@@ -31,3 +31,6 @@ segundos_lon = round(float(segundos_lon),1)
 segundos_lon = segundos_lon
 
 print("La latitud en coordenadas decimales es: " + grados_lon + "°" + str(int(minuto_lon)) + "'" + str(segundos_lon) + '"' + "W")
+
+#La latitud en coordenadas decimales es: 6°15'09.3"N
+#La latitud en coordenadas decimales es: 75°33'54.3"W
