@@ -1,4 +1,4 @@
-######### NO MODIFICAR ##########
+########################################################### NO MODIFICAR #####################################################################
 
 # Importar librerías
 import smtplib
@@ -68,7 +68,7 @@ class SendEmail():
         except Exception as e:
             print("Error ", e)
 
-######### NO MODIFICAR HASTA AQUÍ ##########
+########################################################## NO MODIFICAR HASTA AQUÍ #######################################################3
 
 
 # Se invoca la clase y se le otorgan los parámetros necesarios para el envío de correo
@@ -76,6 +76,8 @@ class SendEmail():
 # Solo en settings deberá cambiar los valores para las variables USERNAME_SMTP, PASSWORD_SMTP
 # Recuerda proporcionar los dos emails uno para emisor y otro para receptor
 # Estructura: emisor, nombre emisor, remitente, titulo correo, mensaje correo
-send_email = SendEmail("erika.giselle.gb@gmail.com", "Erika Gutierrez", "erika.giselle.gb@hotmail.com",
-                       "Prueba correo estudiantes", "Esto es una prueba de correo para el trabajo final de los estudiantes")
-send_email.send()
+
+
+########## DESCOMENTAR ESTAS LINEAS SI VAS A COPIAR Y PEGAR EL VALOR O CONTENIDO DE ESTA CLASE EN TU PROYECTO #################
+#send_email = SendEmail("erika.giselle.gb@gmail.com", "Erika Gutierrez", "erika.giselle.gb@hotmail.com", "Prueba correo estudiantes", "Esto es una prueba de correo para el trabajo final de los estudiantes")
+#send_email.send()
