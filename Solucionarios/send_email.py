@@ -1,3 +1,5 @@
+######### NO MODIFICAR ##########
+
 # Importar librerías
 import smtplib
 import email.utils
@@ -10,6 +12,7 @@ from email.mime.text import MIMEText
 class Settings():
     # Método con valores estáticos de configuración
     # Se retorna la información con las credenciales.
+    # SOLO MODIFICAR USERNAME_SMTP Y PASSWORD_SMTP CON LOS VALORES ENTREGADOS POR TEAMS
     @staticmethod
     def config_data():
         # REEMPLAZAR POR VALORES ENTREGADOS VÍA TEAMS - NO SUBIR ARCHIVO CON CREDENCIALES AL REPOSITORIO
@@ -65,8 +68,13 @@ class SendEmail():
         except Exception as e:
             print("Error ", e)
 
+######### NO MODIFICAR HASTA AQUÍ ##########
+
 
 # Se invoca la clase y se le otorgan los parámetros necesarios para el envío de correo
+# Usted solo deberá implementar una línea parecida a esta, no modificar nada de la clase Settings y de la clase SendEmail
+# Solo en settings deberá cambiar los valores para las variables USERNAME_SMTP, PASSWORD_SMTP
+# Recuerda proporcionar los dos emails uno para emisor y otro para receptor
 send_email = SendEmail("erika.giselle.gb@gmail.com", "Erika Gutierrez", "erika.giselle.gb@hotmail.com",
                        "Prueba correo estudiantes", "Esto es una prueba de correo para el trabajo final de los estudiantes")
 send_email.send()
