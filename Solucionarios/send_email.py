@@ -31,7 +31,7 @@ class Settings():
             "port": PORT
         }
 
-# Se crea clase para el envio de correo que recive un emisor, nombre de quien envia, remitente, titulo del mesanje y mensaje en texto plano
+# Se crea clase para el envio de correo que recibe un emisor, nombre de quien envia, remitente, titulo del mesanje y mensaje en texto plano
 
 
 class SendEmail():
@@ -75,6 +75,7 @@ class SendEmail():
 # Usted solo deberá implementar una línea parecida a esta, no modificar nada de la clase Settings y de la clase SendEmail
 # Solo en settings deberá cambiar los valores para las variables USERNAME_SMTP, PASSWORD_SMTP
 # Recuerda proporcionar los dos emails uno para emisor y otro para receptor
+# Estructura: emisor, nombre emisor, remitente, titulo correo, mensaje correo
 send_email = SendEmail("erika.giselle.gb@gmail.com", "Erika Gutierrez", "erika.giselle.gb@hotmail.com",
                        "Prueba correo estudiantes", "Esto es una prueba de correo para el trabajo final de los estudiantes")
 send_email.send()
