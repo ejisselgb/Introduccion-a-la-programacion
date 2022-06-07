@@ -1,41 +1,60 @@
-
-#Enlaces de configuración
-#https://accounts.google.com/DisplayUnlockCaptcha
-#https://www.google.com/settings/security/lesssecureapps
-  
+# Importar librerías
+import smtplib
+import email.utils
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-import smtplib
-  
+
+
+class Settings():
+    @staticmethod
+    def config_data():
+        USERNAME_SMTP = "XXXXX"
+        PASSWORD_SMTP = "XXXXX"
+        HOST = "email-smtp.us-east-2.amazonaws.com"
+        AWS_REGION = "us-east-2"
+        PORT = 587
+
+        return {
+            "username_smtp": USERNAME_SMTP,
+            "pasasword_smtp": PASSWORD_SMTP,
+            "host": HOST,
+            "region": AWS_REGION,
+            "port": PORT
+        }
+
+
 class SendEmail():
-    def __init__(self, password, fromEmail, toEmail, subject, message):
-        self.password = password
-        self.fromEmail = fromEmail
-        self.toEmail = toEmail
+    def __init__(self, sender, sendername, recipient, subject, message):
+        self.sender = sender
+        self.sendername = sendername
+        self.recipient = recipient
         self.subject = subject
         self.message = message
-    
+
     def send(self):
-        message = self.message
-        # create message object instance
         msg = MIMEMultipart()
-        msg.attach(MIMEText(message, 'plain'))
-        password = self.password
-        msg['From'] = self.fromEmail
-        msg['To'] = self.toEmail
         msg['Subject'] = self.subject
+        msg['From'] = email.utils.formataddr((self.sendername, self.sender))
+        msg['To'] = self.recipient
 
-        server = smtplib.SMTP('smtp.gmail.com: 587')
-  
-        server.starttls()
-  
-        server.login(msg['From'], password)
-  
-        server.sendmail(msg['From'], msg['To'], msg.as_string())
-  
-        server.quit()
-  
-        print("successfully sent email to %s:" % (msg['To']))
+        message = MIMEText(self.message, 'plain')
+        msg.attach(message)
 
-sendmail = SendEmail("clave", "erika.giselle.gb@gmail.com", "erika.giselle.gb@gmail.com", "Test", "Aqui mandar datos")
-sendmail.send()
+        config = Settings().config_data()
+
+        try:
+            server = smtplib.SMTP(config['host'], config['port'])
+            server.ehlo()
+            server.starttls()
+            server.ehlo()
+            server.login(config['username_smtp'], config['pasasword_smtp'])
+            server.sendmail(self.sender, self.recipient, msg.as_string())
+            server.close()
+            print("Email enviado correctamente")
+        except Exception as e:
+            print("Error ", e)
+
+
+send_email = SendEmail("erika.giselle.gb@gmail.com", "Erika Gutierrez", "erika.giselle.gb@gmail.com",
+                       "Prueba correo estudiantes", "Esto es una prueba de correo para el trabajo final de los estudiantes")
+send_email.send()
