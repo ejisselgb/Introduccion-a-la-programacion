@@ -11,9 +11,6 @@ ejecutar análisis de manera más rápida y precisa y apoyar procesos de investi
 ##### Histórico de cursos:
 
 [Semestre 2021-2](https://github.com/ejisselgb/Introduccion-a-la-programacion/tree/semestre-2021-2)
-
-### El curso vigente para este semestre es:
-
 [Semestre 2022-1](https://github.com/ejisselgb/Introduccion-a-la-programacion/tree/semestre-2022-1)
 
 
