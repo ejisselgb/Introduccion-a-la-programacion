@@ -6,7 +6,7 @@ Aquí encontrarás las clases diseñadas según tu semestre.
 **Objetivo del curso:** Aprender todo sobre programación para optimizar y automatizar tareas manuales,
 ejecutar análisis de manera más rápida y precisa y apoyar procesos de investigación de microorganismos haciendo uso de la tecnología.
 
-#### Si ya viste este curso, aquí podrás encontrar el historico, puedes utilizar las clases para recordar conceptos y ver algunos tutoriales de apoyo.
+#### Si ya viste este curso, aquí podrás encontrar el histórico, puedes utilizar las clases para recordar conceptos y ver algunos tutoriales de apoyo.
 
 ##### Histórico de cursos:
 
